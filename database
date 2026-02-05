@@ -1,0 +1,20 @@
+import { Button } from "@/components/ui/button";
+
+interface NavbarProps {
+  onLogin: () => void;
+  onGetStarted: () => void;
+}
+
+export const Navbar = ({ onLogin, onGetStarted }: NavbarProps) => {
+  return (
+    <nav className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 items-center justify-between">
+        <div className="font-bold text-xl">Logo</div>
+        <div className="flex gap-4">
+          <Button variant="ghost" onClick={onLogin}>Login</Button>
+          <Button onClick={onGetStarted}>Get Started</Button>
+        </div>
+      </div>
+    </nav>
+  );
+};
